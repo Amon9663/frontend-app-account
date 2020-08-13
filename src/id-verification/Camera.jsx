@@ -22,6 +22,10 @@ class Camera extends React.Component {
     this.cameraPhoto.startCameraMaxResolution(FACING_MODES.USER);
   }
 
+  async componentWillUnmount() {
+    this.cameraPhoto.stopCamera();
+  }
+
   takePhoto() {
     if (this.state.dataUri) {
       return this.reset();

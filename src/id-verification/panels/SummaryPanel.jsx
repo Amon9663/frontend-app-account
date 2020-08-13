@@ -20,6 +20,7 @@ function SummaryPanel(props) {
     idPhotoFile,
     nameOnAccount,
     idPhotoName,
+    stopUserMedia,
   } = useContext(IdVerificationContext);
   const nameToBeUsed = idPhotoName || nameOnAccount || '';
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -35,6 +36,7 @@ function SummaryPanel(props) {
       };
       const result = await submitIdVerification(verificationData);
       if (result.success) {
+        stopUserMedia();
         history.push(nextPanelSlug);
       }
     }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Router } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
-import { render, cleanup, act, screen, fireEvent } from '@testing-library/react';
+import { render, cleanup, act, screen, fireEvent, waitFor } from '@testing-library/react';
 import '@edx/frontend-platform/analytics';
 import { injectIntl, IntlProvider } from '@edx/frontend-platform/i18n';
 import { submitIdVerification } from '../../data/service';
@@ -30,6 +30,7 @@ describe('SummaryPanel', () => {
     idPhotoFile: 'test.jpg',
     nameOnAccount: '',
     idPhotoName: '',
+    stopUserMedia: jest.fn(),
   };
 
   afterEach(() => {
@@ -49,5 +50,6 @@ describe('SummaryPanel', () => {
     const button = await screen.findByTestId('submit-button');
     fireEvent.click(button);
     expect(submitIdVerification).toHaveBeenCalled();
+    await waitFor(() => expect(contextValue.stopUserMedia).toHaveBeenCalled())
   });
 });
