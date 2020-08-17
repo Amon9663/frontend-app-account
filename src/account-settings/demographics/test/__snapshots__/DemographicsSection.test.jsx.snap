@@ -1260,15 +1260,7 @@ exports[`DemographicsSection should render ethnicity correctly when multiple opt
           </button>
         </div>
         <p>
-          <button
-            className="btn btn-link p-0"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            type="button"
-          >
-            Add gender identity
-          </button>
+          Prefer not to respond
         </p>
         <p
           className="small text-muted mt-n2"
@@ -1392,15 +1384,7 @@ exports[`DemographicsSection should render ethnicity correctly when multiple opt
           </button>
         </div>
         <p>
-          <button
-            className="btn btn-link p-0"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            type="button"
-          >
-            Add family income
-          </button>
+          Prefer not to respond
         </p>
         <p
           className="small text-muted mt-n2"
@@ -1462,15 +1446,7 @@ exports[`DemographicsSection should render ethnicity correctly when multiple opt
           </button>
         </div>
         <p>
-          <button
-            className="btn btn-link p-0"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            type="button"
-          >
-            Add military status
-          </button>
+          Prefer not to respond
         </p>
         <p
           className="small text-muted mt-n2"
@@ -1532,15 +1508,7 @@ exports[`DemographicsSection should render ethnicity correctly when multiple opt
           </button>
         </div>
         <p>
-          <button
-            className="btn btn-link p-0"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            type="button"
-          >
-            Add education level
-          </button>
+          Prefer not to respond
         </p>
         <p
           className="small text-muted mt-n2"
@@ -1602,15 +1570,7 @@ exports[`DemographicsSection should render ethnicity correctly when multiple opt
           </button>
         </div>
         <p>
-          <button
-            className="btn btn-link p-0"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            type="button"
-          >
-            Add education level
-          </button>
+          Prefer not to respond
         </p>
         <p
           className="small text-muted mt-n2"
@@ -1672,15 +1632,7 @@ exports[`DemographicsSection should render ethnicity correctly when multiple opt
           </button>
         </div>
         <p>
-          <button
-            className="btn btn-link p-0"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            type="button"
-          >
-            Add employment status
-          </button>
+          Prefer not to respond
         </p>
         <p
           className="small text-muted mt-n2"
@@ -1742,15 +1694,7 @@ exports[`DemographicsSection should render ethnicity correctly when multiple opt
           </button>
         </div>
         <p>
-          <button
-            className="btn btn-link p-0"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            type="button"
-          >
-            Add work industry
-          </button>
+          Prefer not to respond
         </p>
         <p
           className="small text-muted mt-n2"
@@ -1812,15 +1756,7 @@ exports[`DemographicsSection should render ethnicity correctly when multiple opt
           </button>
         </div>
         <p>
-          <button
-            className="btn btn-link p-0"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            type="button"
-          >
-            Add work industry
-          </button>
+          Prefer not to respond
         </p>
         <p
           className="small text-muted mt-n2"
@@ -1903,15 +1839,7 @@ exports[`DemographicsSection should render ethnicity text correctly 1`] = `
           </button>
         </div>
         <p>
-          <button
-            className="btn btn-link p-0"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            type="button"
-          >
-            Add gender identity
-          </button>
+          Prefer not to respond
         </p>
         <p
           className="small text-muted mt-n2"
@@ -2035,15 +1963,7 @@ exports[`DemographicsSection should render ethnicity text correctly 1`] = `
           </button>
         </div>
         <p>
-          <button
-            className="btn btn-link p-0"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            type="button"
-          >
-            Add family income
-          </button>
+          Prefer not to respond
         </p>
         <p
           className="small text-muted mt-n2"
@@ -2105,15 +2025,7 @@ exports[`DemographicsSection should render ethnicity text correctly 1`] = `
           </button>
         </div>
         <p>
-          <button
-            className="btn btn-link p-0"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            type="button"
-          >
-            Add military status
-          </button>
+          Prefer not to respond
         </p>
         <p
           className="small text-muted mt-n2"
@@ -2175,15 +2087,7 @@ exports[`DemographicsSection should render ethnicity text correctly 1`] = `
           </button>
         </div>
         <p>
-          <button
-            className="btn btn-link p-0"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            type="button"
-          >
-            Add education level
-          </button>
+          Prefer not to respond
         </p>
         <p
           className="small text-muted mt-n2"
@@ -2245,15 +2149,7 @@ exports[`DemographicsSection should render ethnicity text correctly 1`] = `
           </button>
         </div>
         <p>
-          <button
-            className="btn btn-link p-0"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            type="button"
-          >
-            Add education level
-          </button>
+          Prefer not to respond
         </p>
         <p
           className="small text-muted mt-n2"
@@ -2315,15 +2211,7 @@ exports[`DemographicsSection should render ethnicity text correctly 1`] = `
           </button>
         </div>
         <p>
-          <button
-            className="btn btn-link p-0"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            type="button"
-          >
-            Add employment status
-          </button>
+          Prefer not to respond
         </p>
         <p
           className="small text-muted mt-n2"
@@ -2385,15 +2273,7 @@ exports[`DemographicsSection should render ethnicity text correctly 1`] = `
           </button>
         </div>
         <p>
-          <button
-            className="btn btn-link p-0"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            type="button"
-          >
-            Add work industry
-          </button>
+          Prefer not to respond
         </p>
         <p
           className="small text-muted mt-n2"
@@ -2455,15 +2335,7 @@ exports[`DemographicsSection should render ethnicity text correctly 1`] = `
           </button>
         </div>
         <p>
-          <button
-            className="btn btn-link p-0"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            type="button"
-          >
-            Add work industry
-          </button>
+          Prefer not to respond
         </p>
         <p
           className="small text-muted mt-n2"
@@ -2546,15 +2418,7 @@ exports[`DemographicsSection should set user input correctly when user provides 
           </button>
         </div>
         <p>
-          <button
-            className="btn btn-link p-0"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            type="button"
-          >
-            Add gender identity
-          </button>
+          Prefer not to respond
         </p>
         <p
           className="small text-muted mt-n2"
@@ -2686,15 +2550,7 @@ exports[`DemographicsSection should set user input correctly when user provides 
           </button>
         </div>
         <p>
-          <button
-            className="btn btn-link p-0"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            type="button"
-          >
-            Add family income
-          </button>
+          Prefer not to respond
         </p>
         <p
           className="small text-muted mt-n2"
@@ -2756,15 +2612,7 @@ exports[`DemographicsSection should set user input correctly when user provides 
           </button>
         </div>
         <p>
-          <button
-            className="btn btn-link p-0"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            type="button"
-          >
-            Add military status
-          </button>
+          Prefer not to respond
         </p>
         <p
           className="small text-muted mt-n2"
@@ -2826,15 +2674,7 @@ exports[`DemographicsSection should set user input correctly when user provides 
           </button>
         </div>
         <p>
-          <button
-            className="btn btn-link p-0"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            type="button"
-          >
-            Add education level
-          </button>
+          Prefer not to respond
         </p>
         <p
           className="small text-muted mt-n2"
@@ -2896,15 +2736,7 @@ exports[`DemographicsSection should set user input correctly when user provides 
           </button>
         </div>
         <p>
-          <button
-            className="btn btn-link p-0"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            type="button"
-          >
-            Add education level
-          </button>
+          Prefer not to respond
         </p>
         <p
           className="small text-muted mt-n2"
@@ -3028,15 +2860,7 @@ exports[`DemographicsSection should set user input correctly when user provides 
           </button>
         </div>
         <p>
-          <button
-            className="btn btn-link p-0"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            type="button"
-          >
-            Add work industry
-          </button>
+          Prefer not to respond
         </p>
         <p
           className="small text-muted mt-n2"
@@ -3098,15 +2922,7 @@ exports[`DemographicsSection should set user input correctly when user provides 
           </button>
         </div>
         <p>
-          <button
-            className="btn btn-link p-0"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            type="button"
-          >
-            Add work industry
-          </button>
+          Prefer not to respond
         </p>
         <p
           className="small text-muted mt-n2"
@@ -3189,7 +3005,7 @@ exports[`DemographicsSection should set user input correctly when user provides 
           </button>
         </div>
         <p>
-          Prefer to self-describe: test
+          Prefer to self describe: test
         </p>
         <p
           className="small text-muted mt-n2"
@@ -3321,15 +3137,7 @@ exports[`DemographicsSection should set user input correctly when user provides 
           </button>
         </div>
         <p>
-          <button
-            className="btn btn-link p-0"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            type="button"
-          >
-            Add family income
-          </button>
+          Prefer not to respond
         </p>
         <p
           className="small text-muted mt-n2"
@@ -3391,15 +3199,7 @@ exports[`DemographicsSection should set user input correctly when user provides 
           </button>
         </div>
         <p>
-          <button
-            className="btn btn-link p-0"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            type="button"
-          >
-            Add military status
-          </button>
+          Prefer not to respond
         </p>
         <p
           className="small text-muted mt-n2"
@@ -3461,15 +3261,7 @@ exports[`DemographicsSection should set user input correctly when user provides 
           </button>
         </div>
         <p>
-          <button
-            className="btn btn-link p-0"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            type="button"
-          >
-            Add education level
-          </button>
+          Prefer not to respond
         </p>
         <p
           className="small text-muted mt-n2"
@@ -3531,15 +3323,7 @@ exports[`DemographicsSection should set user input correctly when user provides 
           </button>
         </div>
         <p>
-          <button
-            className="btn btn-link p-0"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            type="button"
-          >
-            Add education level
-          </button>
+          Prefer not to respond
         </p>
         <p
           className="small text-muted mt-n2"
@@ -3601,15 +3385,7 @@ exports[`DemographicsSection should set user input correctly when user provides 
           </button>
         </div>
         <p>
-          <button
-            className="btn btn-link p-0"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            type="button"
-          >
-            Add employment status
-          </button>
+          Prefer not to respond
         </p>
         <p
           className="small text-muted mt-n2"
@@ -3671,15 +3447,7 @@ exports[`DemographicsSection should set user input correctly when user provides 
           </button>
         </div>
         <p>
-          <button
-            className="btn btn-link p-0"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            type="button"
-          >
-            Add work industry
-          </button>
+          Prefer not to respond
         </p>
         <p
           className="small text-muted mt-n2"
@@ -3741,15 +3509,7 @@ exports[`DemographicsSection should set user input correctly when user provides 
           </button>
         </div>
         <p>
-          <button
-            className="btn btn-link p-0"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            type="button"
-          >
-            Add work industry
-          </button>
+          Prefer not to respond
         </p>
         <p
           className="small text-muted mt-n2"

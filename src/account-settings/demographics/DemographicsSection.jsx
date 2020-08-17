@@ -1,12 +1,4 @@
 import {
-  DECLINED,
-  DEMOGRAPHICS_EDUCATION_LEVEL_OPTIONS,
-  DEMOGRAPHICS_ETHNICITY_OPTIONS,
-  DEMOGRAPHICS_GENDER_OPTIONS,
-  DEMOGRAPHICS_INCOME_OPTIONS,
-  DEMOGRAPHICS_MILITARY_HISTORY_OPTIONS,
-  DEMOGRAPHICS_WORK_SECTOR_OPTIONS,
-  DEMOGRAPHICS_WORK_STATUS_OPTIONS,
   OTHER,
   SELF_DESCRIBE,
 } from '../data/constants';
@@ -38,66 +30,53 @@ class DemographicsSection extends React.Component {
     this.alertRef = React.createRef();
   }
 
-  checkFormForDemographicsErrors() {
-    if(!isEmpty(this.props.formErrors.demographicsError)) {
-      return true;
-    }
-
-    return false;
-  }
-
   componentDidUpdate() {
-    if(this.checkFormForDemographicsErrors()) {
+    // check for Demographics related errors on component update
+    if(!isEmpty(this.props.formErrors.demographicsError)) {
       this.alertRef.current.focus();
     }
   }
 
-  getLocalizedOptions = memoize((locale) => ({
-    demographicsGenderOptions: DEMOGRAPHICS_GENDER_OPTIONS.map(key => ({
-      value: key,
-      label: this.props.intl.formatMessage(messages[`account.settings.field.demographics.gender.options.${key || 'empty'}`]),
-    })).concat(this.getDeclinedOption()),
-    demographicsEthnicityOptions: DEMOGRAPHICS_ETHNICITY_OPTIONS.map(key => ({
-      value: key,
-      label: this.props.intl.formatMessage(messages[`account.settings.field.demographics.ethnicity.options.${key || 'empty'}`]),
-    })).concat(this.getDeclinedOption()),
-    demographicsIncomeOptions: DEMOGRAPHICS_INCOME_OPTIONS.map(key => ({
-      value: key,
-      label: this.props.intl.formatMessage(messages[`account.settings.field.demographics.income.options.${key || 'empty'}`]),
-    })).concat(this.getDeclinedOption()),
-    demographicsMilitaryHistoryOptions: DEMOGRAPHICS_MILITARY_HISTORY_OPTIONS.map(key => ({
-      value: key,
-      label: this.props.intl.formatMessage(messages[`account.settings.field.demographics.military_history.options.${key || 'empty'}`]),
-    })).concat(this.getDeclinedOption()),
-    demographicsEducationLevelOptions: DEMOGRAPHICS_EDUCATION_LEVEL_OPTIONS.map(key => ({
-      value: key,
-      label: this.props.intl.formatMessage(messages[`account.settings.field.demographics.education_level.options.${key || 'empty'}`]),
-    })).concat(this.getDeclinedOption()),
-    demographicsWorkStatusOptions: DEMOGRAPHICS_WORK_STATUS_OPTIONS.map(key => ({
-      value: key,
-      label: this.props.intl.formatMessage(messages[`account.settings.field.demographics.work_status.options.${key || 'empty'}`]),
-    })).concat(this.getDeclinedOption()),
-    demographicsWorkSectorOptions: DEMOGRAPHICS_WORK_SECTOR_OPTIONS.map(key => ({
-      value: key,
-      label: this.props.intl.formatMessage(messages[`account.settings.field.demographics.work_sector.options.${key || 'empty'}`]),
-    })).concat(this.getDeclinedOption()),
+  getApiOptions = memoize((demographicsOptions) => ({
+    demographicsGenderOptions: demographicsOptions.actions.POST.gender.choices.map(key => ({
+      value: key.value,
+      label: key.display_name
+    })),
+    demographicsEthnicityOptions: demographicsOptions.actions.POST.user_ethnicity.child.children.ethnicity.choices.map(key => ({
+      value: key.value,
+      label: key.display_name
+    })),
+    demographicsIncomeOptions: demographicsOptions.actions.POST.income.choices.map(key => ({
+      value: key.value,
+      label: key.display_name
+    })),
+    demographicsMilitaryHistoryOptions: demographicsOptions.actions.POST.military_history.choices.map(key => ({
+      value: key.value,
+      label: key.display_name
+    })),
+    demographicsEducationLevelOptions: demographicsOptions.actions.POST.learner_education_level.choices.map(key => ({
+      value: key.value,
+      label: key.display_name
+    })),
+    demographicsWorkStatusOptions: demographicsOptions.actions.POST.work_status.choices.map(key => ({
+      value: key.value,
+      label: key.display_name
+    })),
+    demographicsWorkSectorOptions: demographicsOptions.actions.POST.current_work_sector.choices.map(key => ({
+      value: key.value,
+      label: key.display_name
+    })),
   }));
 
-  getDeclinedOption() {
-    return [{
-      value: DECLINED,
-      label: this.props.intl.formatMessage(messages[`account.settings.field.demographics.options.declined`])
-    }]
-  }
-
-  ethnicityFieldDisplay = () => {
+  ethnicityFieldDisplay = (demographicsEthnicityOptions) => {
     if (get(this, 'props.formValues.demographics_user_ethnicity')) {
-      const ethnicities = this.props.formValues.demographics_user_ethnicity;
+      const ethnicities = this.props.formValues.demographics_user_ethnicity;  
       return ethnicities.map((e) => {
-        if (e == DECLINED) {
-          return this.props.intl.formatMessage(messages[`account.settings.field.demographics.options.declined`]);
+        for (var option in demographicsEthnicityOptions) {
+          if (e === demographicsEthnicityOptions[option].value) {
+            return demographicsEthnicityOptions[option].label;
+          }
         }
-        return this.props.intl.formatMessage(messages[`account.settings.field.demographics.ethnicity.options.${e}`]);
       }).join(", ")
     }
   }
@@ -127,7 +106,7 @@ class DemographicsSection extends React.Component {
    * and temporarily cannot be updated.
    */
   renderDemographicsServiceIssueWarning() {
-    if (this.checkFormForDemographicsErrors()) {
+    if (!isEmpty(this.props.formErrors.demographicsError)) {
       return (
         <div
           tabIndex="-1"
@@ -160,7 +139,7 @@ class DemographicsSection extends React.Component {
       demographicsEducationLevelOptions,
       demographicsWorkStatusOptions,
       demographicsWorkSectorOptions,
-    } = this.getLocalizedOptions(this.context.locale);
+    } = this.getApiOptions(this.props.formValues.demographicsOptions);
 
     const showSelfDescribe = this.props.formValues.demographics_gender == SELF_DESCRIBE;
     const showWorkStatusDescribe = this.props.formValues.demographics_work_status == OTHER;
@@ -204,7 +183,7 @@ class DemographicsSection extends React.Component {
           name="demographics_user_ethnicity"
           type="select"
           hidden
-          value={this.ethnicityFieldDisplay()}
+          value={this.ethnicityFieldDisplay(demographicsEthnicityOptions)}
           label={this.props.intl.formatMessage(messages['account.settings.field.demographics.ethnicity'])}
           emptyLabel={this.props.intl.formatMessage(messages['account.settings.field.demographics.ethnicity.empty'])}
           {...editableFieldProps}

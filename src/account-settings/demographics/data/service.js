@@ -120,3 +120,68 @@ export async function patchDemographics(userId, commitValues) {
 
   return convertData(data, FROM);
 }
+
+/**
+ * retrieve the options
+ */
+export async function getDemographicsOptions() {
+  const requestUrl = `${getConfig().DEMOGRAPHICS_BASE_URL}/demographics/api/v1/demographics/`;
+  let data = {};
+
+  try {
+    ({ data } = await getAuthenticatedHttpClient().options(requestUrl));
+  } catch (error) {
+    /* TODO: We should spend more time to come up with a better solution to error handling here.
+
+             I opted to go for the "dummy data" object because if we throw an Exception here it
+             will cause the entire page to crash when loading with an Axios error.
+
+             However, using the dummy object is not an ideal from the user experience either. It
+             will appear as if the user hasn't answered any Demographics questions. It will render
+             a drop-down selection with no options to choose from (each `choices` array is empty).
+
+             A poor or confusing UX experience seems better than crashing the entire page.
+    */
+    data = {
+      actions: {
+        POST: {
+          gender: {
+            choices: [],
+          },
+          income: {
+            choices: [],
+          },
+          learner_education_level: {
+            choices: [],
+          },
+          parent_education_level: {
+            choices: [],
+          },
+          military_history: {
+            choices: [],
+          },
+          work_status: {
+            choices: [],
+          },
+          current_work_sector: {
+            choices: [],
+          },
+          future_work_sector: {
+            choices: [],
+          },
+          user_ethnicity: {
+            child: {
+              children: {
+                ethnicity: {
+                  choices: [],
+                },
+              },
+            },
+          },
+        },
+      },
+    };
+  }
+
+  return data;
+}
